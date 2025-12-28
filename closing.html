@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closing Message - 100DaysOfUs 💜</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@400;700&family=Amatic+SC:wght@400;700&family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #F8F5FF;
+            --bg-secondary: #F0EBFF;
+            --accent: #8A2BE2;
+            --accent-light: #9D4EDD;
+            --accent-dark: #6A0DAD;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --button-bg: #9370DB;
+            --button-hover: #B19CD9;
+            --egg-pink: #FF6F91;
+            --egg-light: #FFD6E0;
+            --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(138, 43, 226, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(138, 43, 226, 0.03) 0%, transparent 20%);
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(138, 43, 226, 0.1);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.8rem;
+            color: var(--accent);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+            animation: pulse 2s infinite;
+            color: var(--accent);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 15px;
+            flex-wrap: wrap;
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: var(--transition);
+            font-family: 'Poppins', sans-serif;
+            border: 1px solid transparent;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            background-color: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.2);
+        }
+
+        nav a.active {
+            background-color: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+            min-height: calc(100vh - 200px);
+        }
+
+        /* Back Button */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--bg-secondary);
+            color: var(--text-dark);
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-bottom: 30px;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+        }
+
+        .back-button:hover {
+            background-color: var(--accent);
+            color: white;
+            gap: 15px;
+            transform: translateX(-5px);
+        }
+
+        /* Closing message page */
+        .closing-section {
+            max-width: 800px;
+            margin: 60px auto;
+            text-align: center;
+            background-color: white;
+            padding: 60px;
+            border-radius: 25px;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: closeAppear 1s ease-out forwards;
+        }
+
+        @keyframes closeAppear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .closing-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, var(--accent), var(--button-bg));
+        }
+
+        .closing-section h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.8rem;
+            color: var(--accent);
+            margin-bottom: 30px;
+        }
+
+        .closing-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: var(--text-dark);
+        }
+
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-top: 40px;
+            animation: fadeIn 1s ease-out 2s both;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid rgba(138, 43, 226, 0.1);
+            color: var(--text-light);
+            background-color: rgba(255, 255, 255, 0.8);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .heart-emoji {
+            color: var(--accent);
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        /* Floating hearts */
+        .heart-bg {
+            position: absolute;
+            font-size: 1.5rem;
+            color: rgba(138, 43, 226, 0.15);
+            z-index: 1;
+            animation: float 6s infinite ease-in-out;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(10px, -15px) rotate(5deg); }
+            50% { transform: translate(-5px, -25px) rotate(-5deg); }
+            75% { transform: translate(-10px, -15px) rotate(3deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+            
+            nav a {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+            
+            .logo {
+                font-size: 2.2rem;
+            }
+            
+            .closing-section {
+                padding: 40px 25px;
+            }
+            
+            .closing-section h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                justify-content: space-around;
+            }
+            
+            nav a {
+                padding: 6px 12px;
+                font-size: 0.85rem;
+            }
+            
+            .closing-section {
+                padding: 30px 20px;
+            }
+            
+            .closing-section h2 {
+                font-size: 2rem;
+            }
+            
+            .signature {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-heart"></i>
+                100DaysOfUs
+                <i class="fas fa-heart"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="open-when.html" class="nav-link">Open When</a></li>
+                    <li><a href="reasons.html" class="nav-link">100 Reasons</a></li>
+                    <li><a href="flirty.html" class="nav-link">Flirty Surprises</a></li>
+                    <li><a href="pledges.html" class="nav-link">My Promises</a></li>
+                    <li><a href="closing.html" class="nav-link active">Closing Message</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            
+            <div class="closing-section">
+                <h2>Thank You for 100 Days</h2>
+                <p>Thank you for 100 days of laughter, love, and just… us ❤️</p>
+                <p>Every message, every smile, every memory we've made means more to me than I can say.</p>
+                <p>I can't wait for the next 100 days, and the 1000 after that 🫶🏽✨</p>
+                <p>You're my heart, my favorite thought, and my person. I love you, now and always 💜</p>
+                
+                <div class="signature">Forever Yours</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Made with <span class="heart-emoji">💜</span> for the most special person</p>
+            <p>100DaysOfUs © <span id="current-year"></span></p>
+        </div>
+    </footer>
+
+    <script>
+        // Current year for footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add floating hearts
+            addFloatingHearts();
+            
+            // Set active navigation link
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+
+        function addFloatingHearts() {
+            const main = document.querySelector('main');
+            for (let i = 0; i < 8; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart-bg';
+                heart.innerHTML = ['💜', '💟', '💜', '💟', '💜', '💟'][Math.floor(Math.random() * 6)];
+                heart.style.left = `${Math.random() * 90}%`;
+                heart.style.top = `${Math.random() * 90}%`;
+                heart.style.fontSize = `${Math.random() * 1 + 1}rem`;
+                heart.style.animationDelay = `${Math.random() * 5}s`;
+                main.appendChild(heart);
+            }
+        }
+    </script>
+</body>
+</html>
